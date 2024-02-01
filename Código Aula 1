@@ -1,0 +1,63 @@
+# Criação declasse
+class Aluno:
+    # Função/método construtor
+    def __init__(self, matricula, nome, curso, nota):
+    #     Definição de atributos dos alunos
+        self.matricula = matricula
+        self.nome = nome
+        self.curso = curso
+        self.nota = nota
+        self.qtd_faltas = 0
+    def atribuirFalta(self):
+        print(f"Falta atribuida ao aluno: {self.nome}")
+        self.qtd_faltas += 1
+
+aluno1 = Aluno(1,"Emanuel","Python",10)
+aluno2 = Aluno(2,"Neide","JavaScript",10)
+
+print("Curso: ",aluno1.curso)
+
+# Mudar um dado do atributo
+aluno2.nome = 'Neide Lima'
+print("Aluno 2: ", aluno2.nome)
+
+# Como chamar uma função de um objeto?
+aluno1.atribuirFalta()
+aluno1.atribuirFalta()
+aluno1.atribuirFalta()
+aluno2.atribuirFalta()
+print(f"Faltas aluno1: {aluno1.qtd_faltas}")
+print(f"Faltas aluno2: {aluno2.qtd_faltas}")
+
+# ----------------------------------------------------------------------------------------------------------------
+class Carro:
+    def __init__(self, marca, modelo, cor):
+        self.marca = marca
+        self.modelo = modelo
+        self.cor = cor
+        self.ligado = False
+        self.velocidade_atual=0
+
+    def ligar(self):
+        self.ligado=True
+
+    def desligar(self):
+        self.ligado=False
+
+    def atribuirVelocidade(self):
+        if self.ligado==True:
+            self.velocidade_atual += 20
+
+carro1 = Carro("Ford","Ka","Preto")
+carro2 = Carro("Fiat","Mob","Branco")
+
+
+
+print(f"Aqui estão as informações do seu novo carro, Marca: {carro1.marca}, Modelo: {carro1.modelo}, Cor: {carro1.cor}")
+print(f"Aqui estão as informações do seu novo carro, Marca: {carro2.marca}, Modelo: {carro2.modelo}, Cor: {carro2.cor}")
+
+
+
+
+
+
